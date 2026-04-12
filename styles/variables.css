@@ -2,3 +2,16 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --bg-image: url('../images/cover-image-dark.png');
+  --accent-color: #FF0070;
+  --padding-mob: 10px;
+  --padding-desk: 20px;
+  --article-textblock: #F1B2CE;
+  --article-contant-title: #000028;
+  --margin-mob-first-article: 40px;
+  --margin-desk-first-article: 60px;
+  --margin-mob-articles: 50px;
+  --margin-desk-articles: 80px;
+}
