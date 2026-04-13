@@ -4,12 +4,15 @@
 */
 
 :root {
-  --bg-image: url('../images/cover-image-dark.png');
-  --accent-color: #FF0070;
+  --bg-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --corner-color: #ff0070;
+  --button-color: #ff0070;
   --padding-mob: 10px;
   --padding-desk: 20px;
-  --article-textblock: #F1B2CE;
+  --article-textblock: #f1b2ce;
   --article-contant-title: #000028;
+  --main-title: #db00ff;
   --margin-mob-first-article: 40px;
   --margin-desk-first-article: 60px;
   --margin-mob-articles: 50px;
