@@ -21,30 +21,6 @@
   }
 }
 
-.page::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: var(--padding-mob);
-  right: var(--padding-mob);
-  width: 25px;
-  height: 25px;
-  border-top: var(--corner-color) solid 1px;
-  border-right: var(--corner-color) solid 1px;
-}
-
-.page::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  bottom: var(--padding-mob);
-  left: var(--padding-mob);
-  width: 25px;
-  height: 25px;
-  border-bottom: var(--corner-color) solid 1px;
-  border-left: var(--corner-color) solid 1px;
-}
-
 @media (width >= 768px) {
   .page::before {
     top: var(--padding-desk);
@@ -60,6 +36,28 @@
 .header {
   min-height: 668px;
   height: 100vh;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: var(--padding-mob);
+  right: var(--padding-mob);
+  width: 25px;
+  height: 25px;
+  border-top: var(--corner-color) solid 1px;
+  border-right: var(--corner-color) solid 1px;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  border-bottom: var(--corner-color) solid 1px;
+  border-left: var(--corner-color) solid 1px;
 }
 
 .header__theme-menu {
@@ -207,6 +205,7 @@
   font-size: 18px;
   line-height: 23.4px;
   letter-spacing: 0.059rem;
+  margin-bottom: 20px;
 }
 
 .article__second-title {
@@ -244,10 +243,6 @@
   .main__content:not(:first-of-type) {
     margin-top: var(--margin-desk-articles);
   }
-}
-
-.article__item-name {
-  margin-bottom: 20px;
 }
 
 .article__content-block {
@@ -412,6 +407,18 @@
   border-right: var(--corner-color) solid 1px;
 }
 
+.footer::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: var(--corner-color) solid 1px;
+  border-left: var(--corner-color) solid 1px;
+}
+
 .footer__title {
   color: var(--main-title);
   text-shadow: 2px 2px var(--accent-color);
@@ -442,12 +449,10 @@
 
 .article__content-link:hover {
   width: 100%;
-  border: 0;
   border-bottom: 1px solid var(--article-textblock);
 }
 
 .article__content-link:focus {
   width: 100%;
-  border: 0;
   border: 1px solid var(--article-textblock);
 }
