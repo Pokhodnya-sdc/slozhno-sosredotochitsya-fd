@@ -12,9 +12,10 @@ body {
   margin: 0 auto;
   font-family: 'IBM Plex Mono', monospace, sans-serif;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
-body,
 h1,
 h2,
 h3,
