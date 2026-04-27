@@ -5,7 +5,9 @@
 
 :root {
   --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
   --accent-color: #ff0070;
+  --article-title-color: #ff0070;
   --corner-color: #ff0070;
   --button-color: #ff0070;
   --padding-mob: 10px;
@@ -13,8 +15,93 @@
   --article-textblock: #f1b2ce;
   --article-contant-title: #000028;
   --main-title: #db00ff;
-  --margin-mob-first-article: 40px;
-  --margin-desk-first-article: 60px;
+  --mob-article__margin-block: 40px;
+  --desk-article__margin-block: 60px;
   --margin-mob-articles: 50px;
   --margin-desk-articles: 80px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url("../images/cover-image-dark.png");
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --article-title-color: #ff0070;
+    --corner-color: #ff0070;
+    --button-color: #ff0070;
+    --padding-mob: 10px;
+    --padding-desk: 20px;
+    --article-textblock: #f1b2ce;
+    --article-contant-title: #000028;
+    --main-title: #db00ff;
+    --mob-article__margin-block: 40px;
+    --desk-article__margin-block: 60px;
+    --margin-mob-articles: 50px;
+    --margin-desk-articles: 80px;
+  }
+
+  .header__decoration-dark {
+    position: absolute;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 120%;
+    color: var(--accent-color);
+  }
+
+  @media (width < 768px) {
+    .header__decoration-dark {
+      top: calc(var(--padding-mob) + 2.5px);
+      right: calc(var(--padding-mob) + 29px);
+    }
+  }
+
+  @media (width >= 768px) {
+    .header__decoration-dark {
+      top: calc(var(--padding-desk) + 2.5px);
+      right: calc(var(--padding-desk) + 29px);
+    }
+  }
+
+  .header__decoration-dark::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+    background-image: url("../images/Ellipse.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --article-title-color: #353430;
+    --corner-color: #353430;
+    --button-color: #353430;
+    --padding-mob: 10px;
+    --padding-desk: 20px;
+    --article-textblock: #353430;
+    --article-contant-title: #353430;
+    --main-title: #ffc2e6;
+    --mob-article__margin-block: 40px;
+    --desk-article__margin-block: 60px;
+    --margin-mob-articles: 50px;
+    --margin-desk-articles: 80px;
+  }
+
+  .theme-light .header__decoration-dark::after {
+    display: none;
+  }
+
+  .theme-light .header__decoration-dark {
+    display: none;
+  }
 }

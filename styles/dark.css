@@ -5,8 +5,56 @@
 */
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --article-title-color: #ff0070;
+  --corner-color: #ff0070;
+  --button-color: #ff0070;
+  --padding-mob: 10px;
+  --padding-desk: 20px;
+  --article-textblock: #f1b2ce;
+  --article-contant-title: #000028;
+  --main-title: #db00ff;
+  --mob-article__margin-block: 40px;
+  --desk-article__margin-block: 60px;
+  --margin-mob-articles: 50px;
+  --margin-desk-articles: 80px;
+}
+
+.header__decoration-dark {
+  position: absolute;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 120%;
+  color: var(--accent-color);
+}
+
+@media (width < 768px) {
+  .header__decoration-dark {
+    top: calc(var(--padding-mob) + 2.5px);
+    right: calc(var(--padding-mob) + 29px);
+  }
+}
+
+@media (width >= 768px) {
+  .header__decoration-dark {
+    top: calc(var(--padding-desk) + 2.5px);
+    right: calc(var(--padding-desk) + 29px);
+  }
+}
+
+.header__decoration-dark::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  background-image: url("../images/Ellipse.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }

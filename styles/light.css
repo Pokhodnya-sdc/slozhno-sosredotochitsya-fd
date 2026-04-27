@@ -6,7 +6,9 @@
 
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #fff1f7;
   --accent-color: #ff8dcb;
+  --article-title-color: #353430;
   --corner-color: #353430;
   --button-color: #353430;
   --padding-mob: 10px;
@@ -14,8 +16,8 @@
   --article-textblock: #353430;
   --article-contant-title: #353430;
   --main-title: #ffc2e6;
-  --margin-mob-first-article: 40px;
-  --margin-desk-first-article: 60px;
+  --mob-article__margin-block: 40px;
+  --desk-article__margin-block: 60px;
   --margin-mob-articles: 50px;
   --margin-desk-articles: 80px;
 }
